@@ -102,6 +102,19 @@ class voviciAPI {
 			return $response->$r;//->any;
 		}
 	}
+	/**
+	 * __call()
+	 *
+	 * Request data from the API
+	 *
+	 * @access		public
+	 * @param		string
+	 * @param		string, array
+	 * @return		xml
+	 */
+	public function __call($method, $args) {
+		return $this->request($method, $args);
+	}
 	
 	/**
 	 * XMLToArray()
